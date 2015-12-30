@@ -1,9 +1,8 @@
 //
-//  PWTextField.h
-//  4games
+//  DYTextField.h
 //
-//  Created by qinglun.duan on 13-12-4.
-//  Copyright (c) 2013年 com.pwrd. All rights reserved.
+//  Created by duanyu on 13-12-4.
+//  Copyright (c) 2013年 All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

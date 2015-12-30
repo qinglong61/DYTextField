@@ -1,9 +1,8 @@
 //
-//  PWTextField.m
-//  4games
+//  DYTextField.m
 //
-//  Created by qinglun.duan on 13-12-4.
-//  Copyright (c) 2013年 com.pwrd. All rights reserved.
+//  Created by duanyu on 13-12-4.
+//  Copyright (c) 2013年 All rights reserved.
 //
 
 #import "PWTextField.h"
@@ -56,7 +55,7 @@
 {
     UITextView *_textView;
     TextRectLabel *_placeholderLbl;
-    
+
     float _heightOfMaxLines;
     float _textContainerInsetTop;
 }
@@ -75,7 +74,7 @@
         _textView.backgroundColor = [UIColor clearColor];
         _textView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [self addSubview:_textView];
-        
+
         _placeholderLbl = [[TextRectLabel alloc] initWithFrame:_textView.frame];
         _placeholderLbl.textInset = UIEdgeInsetsMake(0, 5, 0, 5);
         [self addSubview:_placeholderLbl];
@@ -165,7 +164,7 @@
     if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0) {
         _textView.textContainerInset = UIEdgeInsetsMake(_textContainerInsetTop, 0, _textContainerInsetTop, 0);
     }
-    
+
     if ([self.delegate respondsToSelector:@selector(textViewDidBeginEditing:)]) {
         [self.delegate textViewDidBeginEditing:self];
     }

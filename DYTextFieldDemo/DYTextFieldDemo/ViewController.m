@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DYTextView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    DYTextView *tv = [[DYTextView alloc] initWithFrame:CGRectMake(0, 100, 320, 30)];
+    tv.backgroundColor = [UIColor lightGrayColor];
+    tv.minHeight = 30;
+    tv.maxNumberOfLines = 5;
+    tv.placeholder = @"placeholder";
+    tv.placeholderColor = [UIColor darkGrayColor];
+    tv.textColor = [UIColor blackColor];
+    tv.font = [UIFont systemFontOfSize:20.f];
+    [self.view addSubview:tv];
 }
 
 - (void)didReceiveMemoryWarning {

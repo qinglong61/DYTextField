@@ -14,6 +14,7 @@
 		18CC9A061D0721FD00C33A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CC9A051D0721FD00C33A38 /* Assets.xcassets */; };
 		18CC9A091D0721FD00C33A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CC9A071D0721FD00C33A38 /* LaunchScreen.storyboard */; };
 		18CC9A121D07221600C33A38 /* DYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC9A111D07221600C33A38 /* DYTextField.m */; };
+		18CC9A171D072A7F00C33A38 /* DYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CC9A161D072A7F00C33A38 /* DYTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		18CC9A0A1D0721FD00C33A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CC9A101D07221600C33A38 /* DYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DYTextField.h; path = ../DYTextField.h; sourceTree = "<group>"; };
 		18CC9A111D07221600C33A38 /* DYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DYTextField.m; path = ../DYTextField.m; sourceTree = "<group>"; };
+		18CC9A151D072A7F00C33A38 /* DYTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DYTextView.h; path = ../DYTextView.h; sourceTree = "<group>"; };
+		18CC9A161D072A7F00C33A38 /* DYTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DYTextView.m; path = ../DYTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,8 @@
 			children = (
 				18CC9A101D07221600C33A38 /* DYTextField.h */,
 				18CC9A111D07221600C33A38 /* DYTextField.m */,
+				18CC9A151D072A7F00C33A38 /* DYTextView.h */,
+				18CC9A161D072A7F00C33A38 /* DYTextView.m */,
 				18CC99F81D0721FD00C33A38 /* DYTextFieldDemo */,
 				18CC99F71D0721FD00C33A38 /* Products */,
 			);
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CC9A011D0721FD00C33A38 /* ViewController.m in Sources */,
+				18CC9A171D072A7F00C33A38 /* DYTextView.m in Sources */,
 				18CC99FE1D0721FD00C33A38 /* AppDelegate.m in Sources */,
 				18CC9A121D07221600C33A38 /* DYTextField.m in Sources */,
 				18CC99FB1D0721FD00C33A38 /* main.m in Sources */,
@@ -308,6 +314,7 @@
 				18CC9A0F1D0721FD00C33A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

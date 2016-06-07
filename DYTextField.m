@@ -5,12 +5,10 @@
 //  Copyright (c) 2013年 All rights reserved.
 //
 
-#import "PWTextField.h"
+#import "DYTextField.h"
 #import <QuartzCore/QuartzCore.h>
-#import "UIView+Size.h"
-#import "TextRectLabel.h"
 
-@implementation PWTextField
+@implementation DYTextField
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -47,14 +45,14 @@
 
 @end
 
-@interface PWTextView () <UITextViewDelegate>
+@interface DYTextView () <UITextViewDelegate>
 
 @end
 
-@implementation PWTextView
+@implementation DYTextView
 {
     UITextView *_textView;
-    TextRectLabel *_placeholderLbl;
+    UILabel *_placeholderLbl;
 
     float _heightOfMaxLines;
     float _textContainerInsetTop;
@@ -75,8 +73,8 @@
         _textView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [self addSubview:_textView];
 
-        _placeholderLbl = [[TextRectLabel alloc] initWithFrame:_textView.frame];
-        _placeholderLbl.textInset = UIEdgeInsetsMake(0, 5, 0, 5);
+        _placeholderLbl = [[UILabel alloc] initWithFrame:_textView.frame];
+//        _placeholderLbl.textInset = UIEdgeInsetsMake(0, 5, 0, 5);
         [self addSubview:_placeholderLbl];
     }
     return self;
@@ -190,8 +188,8 @@
 {
     float newHeight = textView.contentSize.height;
     if ([UIDevice currentDevice].systemVersion.intValue == 7) {
-        newHeight = [self textContainerView].height;
-        textView.contentOffset = CGPointMake(0, newHeight - textView.height);
+        newHeight = [self textContainerView].frame.size.height;
+        textView.contentOffset = CGPointMake(0, newHeight - textView.frame.size.height);
     }
     if ([textView.text isEqualToString:@""]) {
         newHeight = _minHeight;
@@ -200,8 +198,10 @@
         newHeight = _heightOfMaxLines;
     }
     if (newHeight >= _minHeight && newHeight <= _heightOfMaxLines) {
-        if (self.height != newHeight) {
-            self.height = newHeight;
+        if (self.frame.size.height != newHeight) {
+            CGRect rect = self.frame;
+            rect.size.height = newHeight;
+            self.frame = rect;
         }
     }
     [textView scrollRangeToVisible:textView.selectedRange];

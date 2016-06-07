@@ -7,34 +7,34 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PWTextField : UITextField
+@interface DYTextField : UITextField
 
 @property (nonatomic, strong) UIColor *placeholderColor;
 @property (nonatomic, assign) UIEdgeInsets textInset;
 
 @end
 
-@class PWTextView;
-@protocol PWTextViewDelegate <NSObject>
+@class DYTextView;
+@protocol DYTextViewDelegate <NSObject>
 
 @optional
 
-- (BOOL)textViewShouldBeginEditing:(PWTextView *)textView;
-- (BOOL)textViewShouldEndEditing:(PWTextView *)textView;
+- (BOOL)textViewShouldBeginEditing:(DYTextView *)textView;
+- (BOOL)textViewShouldEndEditing:(DYTextView *)textView;
 
-- (void)textViewDidBeginEditing:(PWTextView *)textView;
-- (void)textViewDidEndEditing:(PWTextView *)textView;
+- (void)textViewDidBeginEditing:(DYTextView *)textView;
+- (void)textViewDidEndEditing:(DYTextView *)textView;
 
-- (BOOL)textView:(PWTextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
-- (void)textViewDidChange:(PWTextView *)textView;
+- (BOOL)textView:(DYTextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
+- (void)textViewDidChange:(DYTextView *)textView;
 
-- (void)textViewDidChangeSelection:(PWTextView *)textView;
+- (void)textViewDidChangeSelection:(DYTextView *)textView;
 
 @end
 
-@interface PWTextView : UIView
+@interface DYTextView : UIView
 
-@property (nonatomic, assign)               id<PWTextViewDelegate> delegate;
+@property (nonatomic, assign)               id<DYTextViewDelegate> delegate;
 @property (nonatomic, copy)                 NSString *text;
 @property (nonatomic, strong)               UIFont *font;
 @property (nonatomic, strong)               UIColor *textColor;
